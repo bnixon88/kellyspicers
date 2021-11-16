@@ -11,11 +11,24 @@ html, body {
 
 main {
   margin: auto;
-  width: 50%;
+  width: 100%;
   padding: 20px;
 }
 
 main > h1 {
   text-align: center;
   font-size: 3.5em;
+}
+
+tr.group,
+tr.group:hover {
+    background-color: #ddd !important;
+}
+
+#topcontainer {
+    text-align:center;
+}
+
+.closeout-heading {
+    color: #721c24
 }

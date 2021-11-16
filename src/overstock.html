@@ -1,0 +1,232 @@
+<html>
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Spicers</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+       
+        <script class="init" type="text/javascript">
+          $(document).ready(function() {
+          var groupColumn = 3;
+          var table = $('#tseries').DataTable({
+          "columnDefs": [
+            { "visible": false, "targets": groupColumn }
+          ],
+          "order": [[ groupColumn, 'asc' ]],
+          "displayLength": 150,
+          "drawCallback": function ( settings ) {
+              var api = this.api();
+              var rows = api.rows( {page:'current'} ).nodes();
+              var last=null;
+  
+              api.column(groupColumn, {page:'current'} ).data().each( function ( group, i ) {
+                  if ( last !== group ) {
+                      $(rows).eq( i ).before(
+                          '<tr class="group"><td colspan="5">'+group+'</td></tr>'
+                      );
+  
+                      last = group;
+                      }
+                  } );
+              }
+          } );
+  
+          // Order by the grouping
+          $('#tseries tbody').on( 'click', 'tr.group', function () {
+              var currentOrder = table.order()[0];
+              if ( currentOrder[0] === groupColumn && currentOrder[1] === 'asc' ) {
+                  table.order( [ groupColumn, 'desc' ] ).draw();
+              }
+              else {
+                  table.order( [ groupColumn, 'asc' ] ).draw();
+              }
+          } );
+          } );
+        </script>
+
+    </head>
+    <body>
+      <div class="container">
+        <div id="topcontainer" class="text-center">
+            <h1>Northwest Wide Format Media</h1>
+            <img src="images/spicers_logo566x68.png" class="" width="566" height="68">
+            <h4><i>UV, latex, eco-solvent & aqueous</i></h4>
+        </div>
+        <h4 class="mt-3 closeout-heading">Wide Format Overstocks</h4>
+        <table id="closeout" class="table table-sm mb-5" width="100%">
+          <thead class="alert-danger">
+            <tr>
+                <th scope="col">Nextlevel</th>
+                <th scope="col">Description</th>
+                <th scope="col">Size (roll unless noted)</th>
+                <th scope="col">QTY Available <br>9/26/2021</th>
+                <th scope="col" class="text-right">Sell Price<br>(roll or sheet)</td>
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>7000144</td>
+              <td class="text-left">
+                <a target="_blank" rel="noopener noreferrer" href="https://novapakpaper.com/product/wide-format-printing/">NovaPak Engineering Bond</a>
+              </td>
+              <td class="text-left">20lb 30" x 500'</td>
+              <td class="text-left">50 rolls</td>
+              <td class="text-right">$9.80</td>
+            </tr>
+            <tr>
+              <td>7001983</td>
+              <td class="text-left">
+                <a target="_blank" rel="noopener noreferrer" href="https://nekoosa.com/products/hi-stat">Mojave Hi-Stat Cling Vinyl</a>
+              </td>
+              <td class="text-left">8mil 60" x 150' 8pt Liner</td>
+              <td class="text-left">5 rolls</td>
+              <td class="text-right">$95.09</td>
+            </tr>
+            <tr>
+              <td>7002167</td>
+              <td class="text-left">
+                <a target="_blank" rel="noopener noreferrer" href="http://www.ultraflexx.com/product/ultima-pro-fl/">Ultraflex Ultima Pro FL</a>
+              </td>
+              <td class="text-left">13oz 54" x 164' Matte</td>
+              <td class="text-left">4 rolls</td>
+              <td class="text-right">$82.07</td>
+            </tr>
+            <tr>
+              <td>7002149</td>
+              <td class="text-left">
+                <a target="_blank" rel="noopener noreferrer" href="https://gilmanbrothers.com/infinity.html">Gilman Infinity</a>
+              </td>
+              <td class="text-left">48" x 96" 1/2" All Wh (12/case)</td>
+              <td class="text-left">12</td>
+              <td class="text-right">$25.70</td>
+            </tr>
+            <tr>
+              <td>7002217</td>
+              <td class="text-left">
+                <a target="_blank" rel="noopener noreferrer" href="http://www.ultraflexx.com/product/strip-mesh-plus/">Ultraflex Strip Mesh Plus</a>
+              </td>
+              <td class="text-left">8oz 54" x 164' Matte</td>
+              <td class="text-left">1 roll</td>
+              <td class="text-right">$98.52</td>
+            </tr>
+            <tr>
+            <tr>
+              <td>7002763</td>
+              <td class="text-left">
+                <a target="_blank" rel="noopener noreferrer" href="http://www.ultraflexx.com/product/pole-banner/">Ultraflex Pole Banner Blockout</a>
+              </td>
+              <td class="text-left">18oz 80" x 164' Matte</td>
+              <td class="text-left">1 roll</td>
+              <td class="text-right">$213.28</td>
+            </tr>
+            <tr>
+              <td>7002395</td>
+              <td class="text-left">
+                <a target="_blank" rel="noopener noreferrer" href="http://www.ultraflexx.com/product/pole-banner/">Ultraflex Pole Banner Blockout</a>
+              </td>
+              <td class="text-left">18oz 63" x 164' Matte</td>
+              <td class="text-left">1 roll</td>
+              <td class="text-right">$168.09</td>
+            </tr>
+            <tr>
+              <td>7003548</td>
+              <td class="text-left">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.mactac.com/Product/JT829PW64L150">MACtac Promo Print Vinyl</a>
+              </td>
+              <td class="text-left">3.9mil 64" x 150' Gloss Permanent</td>
+              <td class="text-left">3 rolls</td>
+              <td class="text-right">$76.34</td>
+            </tr>
+            <tr>
+              <td>7002419</td>
+              <td class="text-left">
+                <a target="_blank" rel="noopener noreferrer" href="http://www.ultraflexx.com/product/superprint-plus-fl/">Ultraflex Superprint Plus FL</a>
+              </td>
+              <td class="text-left">13oz 80" x 164' Matte</td>
+              <td class="text-left">1 roll</td>
+              <td class="text-right">$85.82</td>
+            </tr>
+            <tr>
+              <td>7002485</td>
+              <td class="text-left">
+                <a target="_blank" rel="noopener noreferrer" href="https://gilmanbrothers.com/infinity.html">Gilman Infinity</a>
+              </td>
+              <td class="text-left">60" x 120" 1/2" All Wh (6/case)</td>
+              <td class="text-left">18</td>
+              <td class="text-right">$42.17</td>
+            </tr>
+            <tr>
+              <td>7003380</td>
+              <td class="text-left">
+                <a target="_blank" rel="noopener noreferrer" href="http://www.dafgraphicmedia.com/daf-illusion-perforated-one-way-vision-film/">DAF 70/30 Illusion Outside Mnt</a>
+              </td>
+              <td class="text-left">54" x 100' </td>
+              <td class="text-left">1 roll</td>
+              <td class="text-right">$90.72</td>
+            </tr>
+            <tr>
+              <td>7002324</td>
+              <td class="text-left">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.sihlinc.com/photo_paper/imola_psa/">Sihl 3670 Imola Photo Paper with PSA</a>
+              </td>
+              <td class="text-left">9.5mil 36" x 100' Pearl Permanent</td>
+              <td class="text-left">2 rolls</td>
+              <td class="text-right">$85.73</td>
+            </tr>
+
+            <tr>
+              <td>7002556</td>
+              <td class="text-left">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.mactac.com/Catalog/Applications/Graphics/Other-Applications/Dry-Erase-Applications/PGD6054L150">MACtac Permacolor PromoGard Dry Erase</a>
+              </td>
+              <td class="text-left">1mil 54" x 150' high-gloss</td>
+              <td class="text-left">4 rolls</td>
+              <td class="text-right">$151.46</td>
+            </tr>
+            <tr>
+              <td>7002600</td>
+              <td class="text-left">
+                <a target="_blank" rel="noopener noreferrer" href="http://www.ultraflexx.com/product/pole-banner/">Ultraflex Pole Banner Blockout</a>
+              </td>
+              <td class="text-left">18oz 54" x 164' Matte</td>
+              <td class="text-left">22 rolls</td>
+              <td class="text-right">$178.74</td>
+            </tr>
+            <tr>
+              <td>7003549</td>
+              <td class="text-left">
+                <a target="_blank" rel="noopener noreferrer" href="PDFs/Bulldog_Data_Sheet.pdf">DTEC Bulldog C2S Silk Paperboard</a>
+              </td>
+              <td class="text-left">2mm/79pt 48" x 96" bright white</td>
+              <td class="text-left">1161 sheets</td>
+              <td class="text-right">$9.19</td>
+            </tr>
+            <tr>
+              <td>7003881</td>
+              <td class="text-left">Trans HT-Light Matte</td>
+              <td class="text-left">15mil 50" x 200' Matte Creamy Wh</td>
+              <td class="text-left">25 rolls</td>
+              <td class="text-right">$116.93</td>
+            </tr>
+
+          </tbody>
+        </table>
+        <div class="container">
+          <a class="btn btn-outline-info btn-lg btn-block" href="index.html">Return to Spicers Wide Format Media Listing</a>
+        </div>
+
+          <div class="footer-copyright mt-3 mb-5">
+              &copy;Spicers Pacific Northwest 2021
+          </div>
+      </div>
+
+    </body>
+</html>
