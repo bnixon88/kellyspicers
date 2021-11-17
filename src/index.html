@@ -32,7 +32,7 @@
           api.column(groupColumn, {page:'current'} ).data().each( function ( group, i ) {
               if ( last !== group ) {
                   $(rows).eq( i ).before(
-                      '<tr class="group"><td colspan="5">'+group+'</td></tr>'
+                      '<tr class="group"><td colspan="6">'+group+'</td></tr>'
                   );
 
                   last = group;
@@ -65,9 +65,9 @@
           <p>Loading content from the KellySpicers API: <b id="name" style="color: crimson;">...</b></p>
       </div>
 
-      <div class="container" style="margin-bottom: 20px; text-align: right;">
+<!--       <div class="container" style="margin-bottom: 20px; text-align: right;">
         <a class="btn btn-outline-danger btn-lg" href="overstock.html">Overstock Specials</a>
-      </div>
+      </div> -->
 
       <table id="media" class="table table-sm" width="100%">
         <thead class="thead-light">
@@ -75,6 +75,7 @@
             <th scope="col">Nextlevel</th>
             <th scope="col">Description</th>
             <th scope="col">Size</th>
+            <th scope="col">Segment</th>
             <th scope="col">Application</th>
             <th scope="col">Unit</th>
           </tr>
@@ -86,6 +87,7 @@
                 <a target="_blank" rel="noopener noreferrer" href="https://www.neenahpaper.com/brands/blox-lite-wide-format">Neenah Blox-Lite C2S Blockout Paper</a>
               </td>
               <td class="text-left">12mil 54" x 150'</td>
+              <td class="text-left">Segment</td>
               <td class="text-left">Poster Paper</td>
               <td class="text-left">Roll</td>
             </tr>
@@ -95,6 +97,7 @@
                 <a target="_blank" rel="noopener noreferrer" href="https://www.neenahpaper.com/brands/endura-wide-format">Neenah Endura</a>
               </td>
               <td class="text-left">10pt 54" x 150' Satin</td>
+              <td class="text-left">Segment</td>
               <td class="text-left">Poster Paper</td>
               <td class="text-left">Roll</td>
             </tr>
@@ -104,6 +107,7 @@
                 <a target="_blank" rel="noopener noreferrer" href="https://www.neenahpaper.com/brands/endura-wide-format">Neenah Endura</a>
               </td>
               <td class="text-left">10pt 60" x 150' Satin</td>
+              <td class="text-left">Segment</td>
               <td class="text-left">Poster Paper</td>
               <td class="text-left">Roll</td>
             </tr>
