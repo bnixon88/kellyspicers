@@ -32,3 +32,8 @@ tr.group:hover {
 .closeout-heading {
     color: #721c24
 }
+
+.new {
+  color: crimson;
+  font-weight: normal;
+}
